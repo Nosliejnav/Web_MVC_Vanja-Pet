@@ -1,1 +1,1 @@
-# Web_MVC_Vanja-Pet
+# Vanja Pet Web MVC
