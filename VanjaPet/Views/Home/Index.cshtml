@@ -4,18 +4,58 @@
 
 <div class="text-center">
 
-@foreach (var item in @ViewBag.listaClientes)
-{
-    <div>@item.Id</div>
-    <div>@item.Nome</div>
-    <div>@item.Cpf</div>
-}
+    <div class="container">
+        <h1> >>> Sistema de Controle Interno - Vanja Pet <<< </h1>
 
-@foreach (var item in @ViewBag.listaFornecedores)
-{
-    <div>@item.Id</div>
-    <div>@item.Nome</div>
-    <div>@item.Cnpj</div>
-}
+                <table class="table">
+                    <caption>Lista de Clientes</caption>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">Paciente (pet)</th>
 
-</div>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                @foreach (var item in @ViewBag.ListaClientes)
+                    {
+                                <tr>
+                                    <th scope="row">@item.Id</th>
+                                    <td>@item.Nome</td>
+                                    <td>@item.Cpf</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Paciente</td>
+                                </tr>
+                    }
+                    </tbody>
+                </table>
+                                <table class="table">
+                    <caption>Lista de Fornecedores</caption>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CNPJ</th>
+                            <th scope="col">E-Mail</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                @foreach (var item in @ViewBag.ListaFornecedores)
+                    {
+                                <tr>
+                                    <th scope="row">@item.Id</th>
+                                    <td>@item.Nome</td>
+                                    <td>@item.Cnpj</td>
+                                    <td>@item.Email</td>
+                                </tr>
+                    }
+                    </tbody>
+                </table>
+
+
+    </div>
